@@ -10,6 +10,7 @@
 	<div id="main">
 		<h2>Kitty Adoption Gallery!</h2>
 		<div x-ng-controller="petsCtrl">
+			<span>{{pets.length}} available</span>
 			<a href="" ng-click="adopted()">[ clear adopted ]</a>
 			<ul>
 				<li x-ng-repeat="pet in pets">
