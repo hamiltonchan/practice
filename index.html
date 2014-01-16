@@ -16,10 +16,10 @@
 					<img src="{{pet.image}}">
 				</li>
 			</ul>
-			<form>
-				<input type="name" size="30" placeholder="add new pet name here" />
-				<input type="text" size="30" placeholder="add pet image here" />
-				<input type="submit" value="add">
+			<form x-ng-submit="addNewPet()">
+				<input type="name" size="30" placeholder="add new pet name here" ng-model="newPetName"/>
+				<input type="text" size="30" placeholder="add pet image here" ng-model="newPetImage"/>
+				<input type="submit" value="add"/>
 			</form>
 		</div>
 	</div>
