@@ -9,7 +9,15 @@ function petsCtrl ($scope) {
 			$scope.pets.push({name: $scope.newPetName, image: $scope.newPetImage, adopted: false});
 			$scope.newPetImage = "";
 			$scope.newPetName = "";
-		}
+		};
+
+		$scope.adopted = function() {
+			var gonePets = $scope.pets;
+			$scope.pets = [];
+			angular.forEach(gonePets, function(pet) {
+				if (!pet.adopted) $scope.pets.push(pet);
+			});
+		};
 
 }
 

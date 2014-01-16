@@ -10,8 +10,10 @@
 	<div id="main">
 		<h2>Kitty Adoption Gallery!</h2>
 		<div x-ng-controller="petsCtrl">
+			<a href="" ng-click="adopted()">[ clear adopted ]</a>
 			<ul>
 				<li x-ng-repeat="pet in pets">
+					<input type="checkbox" ng-model="pet.adopted">
 					{{pet.name}}
 					<img src="{{pet.image}}">
 				</li>
