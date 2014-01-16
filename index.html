@@ -7,14 +7,21 @@
 	<script type="text/javascript" src="main.js"></script>
 </head>
 <body>
-	<div id="main" x-ng-controller="petsCtrl">
+	<div id="main">
 		<h2>Kitty Adoption Gallery!</h2>
-		<ul>
-			<li x-ng-repeat="pet in pets">
-				{{pet.name}}
-				<img src="{{pet.image}}" />
-			</li>
-		</ul>
+		<div x-ng-controller="petsCtrl">
+			<ul>
+				<li x-ng-repeat="pet in pets">
+					{{pet.name}}
+					<img src="{{pet.image}}">
+				</li>
+			</ul>
+			<form>
+				<input type="name" size="30" placeholder="add new pet name here" />
+				<input type="text" size="30" placeholder="add pet image here" />
+				<input type="submit" value="add">
+			</form>
+		</div>
 	</div>
 </body>
 </html>
